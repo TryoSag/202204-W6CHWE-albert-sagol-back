@@ -1,0 +1,39 @@
+{
+  "name": "202204-w6chwe-albert-sagol-back",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TryoSag/202204-W6CHWE-albert-sagol-back.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TryoSag/202204-W6CHWE-albert-sagol-back/issues"
+  },
+  "homepage": "https://github.com/TryoSag/202204-W6CHWE-albert-sagol-back#readme",
+  "description": "",
+  "devDependencies": {
+    "@types/jest": "^27.5.1",
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "husky": "^8.0.0",
+    "jest": "^28.1.0",
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^9.2.0",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "morgan": "^1.10.0"
+  }
+}
