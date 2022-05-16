@@ -3,6 +3,8 @@ const chalk = require("chalk");
 const express = require("express");
 const debug = require("debug");
 const morgan = require("morgan");
+const robotsRouter = require("./routers/robotsRouters");
+const { notFoundError, generalError } = require("./middlewares");
 
 const app = express();
 
@@ -22,6 +24,9 @@ const initializeServer = (port) => {
 app.use(morgan("dev"));
 app.use(express.json());
 
-app.use("/robots");
+app.use("/robots", robotsRouter);
+
+app.use(notFoundError);
+app.use(generalError);
 
 module.exports = { initializeServer };
