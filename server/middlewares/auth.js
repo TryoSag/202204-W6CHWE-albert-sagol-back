@@ -1,10 +1,14 @@
+require("dotenv").config();
+
 const auth = (req, res, next) => {
-  const { authoritzation } = req.headers;
+  const { authorization } = req.headers;
+
   try {
-    if (!authoritzation.includes("Bearer")) {
+    if (!authorization.includes("Bearer ")) {
       throw new Error();
     }
-    const token = authoritzation.replace("Bearer ", "");
+    const token = authorization.replace("Bearer ", "");
+
     if (token !== process.env.TOKEN) {
       throw new Error();
     }
