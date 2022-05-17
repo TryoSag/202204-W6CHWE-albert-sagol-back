@@ -1,14 +1,6 @@
 require("dotenv").config();
 const chalk = require("chalk");
-const express = require("express");
 const debug = require("debug");
-
-const app = express();
-
-app.use((req, res, next) => {
-  debug("New request");
-  next();
-});
 
 const notFoundError = (req, res) => {
   res.status(404);
