@@ -4,5 +4,5 @@ const { initializeServer } = require("./server");
 
 (async () => {
   await connectDB();
-  initializeServer(4000);
+  initializeServer(process.env.PORT);
 })();
